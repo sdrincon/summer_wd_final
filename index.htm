@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS style sheet tag-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--external font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
+
+    <!--unoriginal tab title-->
+    <title>VetsInTech Final Project</title>
+
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+
+    <!--meta tags-->
+    <meta name="keywords" content= "HTML, CSS, VetsinTech, Rick and Morty, Simon, Game">
+    
+    <!--preload images and sounds-->
+    <link rel="preload" as="image" href="./images/greenLit.png">
+    <link rel="preload" as="image" href="./images/redLit.png">
+    <link rel="preload" as="image" href="./images/yellowLit.png">
+    <link rel="preload" as="image" href="./images/blueLit.png">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- title of header -->
+        <div class="pageTitle">
+            <img src="./images/logo.png" alt="Simon Logo" width="400px">
+        </div>
+
+        <div class= "game">
+            <!--levels get posted here-->
+            <div class="heading js-heading">Get Schwifty!</h1></div>
+    
+            <!-- main container for game -->      
+            <div class="tile-container js-container unclickable">
+                <div class="tile tile-green" data-tile="green"></div>
+                <div class="tile tile-red" data-tile="red"></div>
+                <div class="tile tile-yellow" data-tile="yellow"></div>
+                <div class="tile tile-blue" data-tile="blue"></div>
+            </div>
+
+              <!--game information box-->
+              <div class="info-section">
+                <button class="start-button js-start">Start</button>
+                <button class="reset-button js-reset hidden">Reset</button>
+                <div class="info js-info hidden"></div>
+              </div>
+
+            <!--hidden audio files-->
+            <div class="sounds"> 
+                <audio preload="auto" src="./sounds/simonSound2.mp3" data-sound="green"></audio>
+                <audio preload="auto" src="./sounds/simonSound3.mp3" data-sound="blue"></audio>
+                <audio preload="auto" src="./sounds/simonSound1.mp3" data-sound="red"></audio>
+                <audio preload="auto" src="./sounds/simonSound4.mp3" data-sound="yellow"></audio>
+                <audio preload="auto" src="./sounds/wubbalubba.mp3" data-sound="win"></audio>
+                <audio preload="auto" src="./sounds/wrong.mp3" data-sound="wrong"></audio>
+                <audio preload="auto" src="./sounds/showme.mp3" data-sound="showme"></audio>
+            </div>
+    
+            <!--hidden modal for winning -->
+            <div class="win-modal">
+                <div class="modal-container">
+                    <img class="modal-img" src="images/rickandmortywin.png" alt="Schwifty">
+                    <div class="modal-content">
+                        <div class="close"><img src="./images/x.png" width="30"></div>
+                        <h1>WUBBA LUBBA DUB DUUUB!</h1>
+                        <p>You got schwifty and made it through all the rounds!</p>
+                        <div class="spacer"></div>
+                        <button class="play-again-button">play again?</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--hidden modal for losing -->
+            <div class="lose-modal">
+                <div class="modal-container">
+                    <img class="modal-img" src="images/rickandmortywrong.png" alt="Wrong">
+                    <div class="modal-content">
+                        <div class="close"><img src="./images/x.png" width="30"></div>
+                        <h1>WRONG!</h1>
+                        <p>Try again!</p>
+                        <div class="spacer"></div>
+                        <button class="start-over-button">start over</button>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <!--footer-->
+        <div class="footer">
+            <p>RICK AND MORTY&trade; is a trademark of Cartoon Network, Inc.<br>Game is purely for educational purposes and not intended for commercial use.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
