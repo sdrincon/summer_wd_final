@@ -80,7 +80,7 @@ function nextRound() {
   //lets player know computer sequence is going 
   info.textContent = 'Wait for the computer';
   //updates level in heading
-  heading.textContent = `Level ${level} of 5`;
+  heading.textContent = `Level ${level} of 20`;
 
   const nextSequence = [...sequence];
   nextSequence.push(nextStep());
@@ -113,8 +113,8 @@ function handleClick(tile) {
   }
   //if player won the round...
   if (humanSequence.length === sequence.length) {
-    //check to see if all 10 rounds were completed
-    if (humanSequence.length === 5) {
+    //check to see if all 20 rounds were completed
+    if (humanSequence.length === 20) {
       displayWinModal(); //winning modal
       //WUBBA LUBBA DUB DUB!!!
       const sound = document.querySelector(`[data-sound='win']`);
